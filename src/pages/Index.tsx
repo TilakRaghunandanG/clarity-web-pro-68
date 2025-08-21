@@ -78,7 +78,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden animate-fade-in">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -92,7 +92,7 @@ const Index = () => {
               AI-Powered Web Auditing Platform
             </Badge>
             
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent animate-scale-in">
               Transform Website Analysis with AI Intelligence
             </h1>
             
@@ -101,10 +101,10 @@ const Index = () => {
               security analysis, accessibility fixes, and GDPR compliance checks - all explained in simple terms.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in">
+              <Button
                 size="lg" 
-                className="bg-gradient-primary hover:shadow-glow px-8 py-3 text-lg"
+                className="bg-gradient-primary hover:shadow-glow px-8 py-3 text-lg hover-scale transition-all duration-300"
                 asChild
               >
                 <Link to="/dashboard">
@@ -113,7 +113,7 @@ const Index = () => {
                 </Link>
               </Button>
               
-              <Button variant="outline" size="lg" className="px-8 py-3 text-lg border-primary/30 hover:bg-primary/10" asChild>
+              <Button variant="outline" size="lg" className="px-8 py-3 text-lg border-primary/30 hover:bg-primary/10 hover-scale transition-all duration-300" asChild>
                 <Link to="/scan/demo?url=https://demo.webauditai.com">
                   View Demo Report
                 </Link>
@@ -121,9 +121,9 @@ const Index = () => {
             </div>
             
             {/* Audit Types */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 animate-slide-in-right">
               {auditTypes.map((type) => (
-                <div key={type.name} className="flex items-center gap-2 bg-background/20 backdrop-blur-sm rounded-full px-4 py-2">
+                <div key={type.name} className="flex items-center gap-2 bg-background/20 backdrop-blur-sm rounded-full px-4 py-2 hover-scale transition-all duration-200">
                   <type.icon className={`h-4 w-4 ${type.color}`} />
                   <span className="text-sm font-medium">{type.name}</span>
                 </div>
@@ -134,11 +134,11 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 border-y border-primary/20 bg-background/30">
+      <section className="py-16 border-y border-primary/20 bg-background/30 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center hover-scale transition-all duration-300">
                 <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
@@ -152,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24">
+      <section className="py-24 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -172,7 +172,7 @@ const Index = () => {
               {features.map((feature, index) => (
                 <Card 
                   key={index} 
-                  className="bg-gradient-card border-primary/20 hover:shadow-elevated transition-all duration-300 hover:border-primary/40 group"
+                  className="bg-gradient-card border-primary/20 hover:shadow-elevated transition-all duration-300 hover:border-primary/40 group hover-scale animate-scale-in"
                 >
                   <CardHeader>
                     <div className={`w-12 h-12 rounded-lg bg-gradient-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
@@ -193,7 +193,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-background/30">
+      <section className="py-24 bg-background/30 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -223,7 +223,7 @@ const Index = () => {
                   ))}
                 </div>
                 
-                <Button className="bg-gradient-primary hover:shadow-glow" asChild>
+                <Button className="bg-gradient-primary hover:shadow-glow hover-scale transition-all duration-300" asChild>
                   <Link to="/dashboard">
                     Learn More About Agency Features
                   </Link>
@@ -231,7 +231,7 @@ const Index = () => {
               </div>
               
               <div className="relative">
-                <Card className="bg-gradient-card border-primary/20 shadow-elevated">
+                <Card className="bg-gradient-card border-primary/20 shadow-elevated animate-slide-in-right hover-scale transition-all duration-300">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <BarChart3 className="h-5 w-5 text-primary" />
@@ -270,7 +270,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -284,7 +284,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-primary hover:shadow-glow px-8 py-3 text-lg"
+                className="bg-gradient-primary hover:shadow-glow px-8 py-3 text-lg hover-scale transition-all duration-300"
                 asChild
               >
                 <Link to="/dashboard">
@@ -293,7 +293,7 @@ const Index = () => {
                 </Link>
               </Button>
               
-              <Button variant="outline" size="lg" className="px-8 py-3 text-lg border-primary/30 hover:bg-primary/10" asChild>
+              <Button variant="outline" size="lg" className="px-8 py-3 text-lg border-primary/30 hover:bg-primary/10 hover-scale transition-all duration-300" asChild>
                 <Link to="/dashboard">
                   Contact Sales
                 </Link>
